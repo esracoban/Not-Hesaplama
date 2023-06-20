@@ -1,1 +1,1 @@
-# Not-Hesplama
+# Not-Hesaplama
