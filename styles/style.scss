@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: linear-gradient(180deg, #8b61f2 47%,white 97.5%);
+    height: 100vh;
+}
+
+.container{
+    background-color: #151a30;
+    color: white;
+    max-width: 500px;
+    padding: 20px;
+    margin: 0  auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    
+    h1{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    form {
+        margin-bottom: 20px;
+
+        .form-group{
+             margin-bottom: 10px;
+
+            input[type="text"],
+            input[type="number"]{
+                width: 100%;
+                padding: 10px;
+                border-radius: 15px;
+                border: 3px solid #96228ea7;
+                outline: none;
+                background: transparent;
+                color: white;
+                &::placeholder{
+                    color: gray;
+                }
+            }
+        }
+
+        button{
+            display: block;
+            padding: 7px 20px;
+            margin: auto; 
+            background: linear-gradient(120deg, rgb(214, 116, 214), rgb(132, 0, 132));
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            &:hover{
+                transform: scale(1.1);
+                transition: ease .5s;
+            }
+        }
+
+    }
+
+    #student-list{
+
+        border-radius: 10px;
+        padding: 10px;
+        height: 280px;
+        overflow-y: scroll;
+        border: 2px solid #652b60 ;
+
+        .student-item{
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            display: flex;
+
+            &-info{
+                display: flex;
+                flex-direction: column;
+                width: 75%;
+                align-items: start;
+                               
+            }
+
+            &-process{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 25%;
+                gap: 5px;
+
+                .delete-button{
+                    background-color: white;
+                    color: #dc3545;
+                    padding: 5px;
+                    font-size: 25px;
+                    border-radius: 50%;
+
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        transition: ease .5s;
+                    }
+
+                }
+                .edit-button{
+                    background-color: #ffee00;
+                    color:black;
+                    padding: 5px;
+                    font-size: 25px;
+                    border-radius: 50%;
+
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        transition: ease .5s;
+                    }
+
+                }
+
+            }
+
+
+            
+        }
+        
+        .empty{
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+    }
+
+    .student-state{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        border-top: 2px solid rgb(150, 150, 150);
+        div{
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            i{
+                width: 20px;
+                height: 20px;
+                background-color: red;
+                border-radius: 5px;
+                margin-left: 10px;
+
+                &:nth-child(1){
+                    background-color: #15aefe;
+                }
+                &:nth-child(3){
+                    background-color: #f47121;
+                }
+                &:nth-child(5){
+                    background-color: #6303ff;
+                }
+                &:nth-child(7){
+                    background-color: #ff0fe4;
+                }
+                
+            }
+        }
+
+    }
+
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+background-color: #f1f1f1;
+border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+background-color: gray;
+border-radius: 20px;
+}
